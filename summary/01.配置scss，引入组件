@@ -1,0 +1,44 @@
+1.一个组件引入另外一个组件，要使用要在components中进行配置。
+import Vm from './Vm.vue'
+
+<script>
+import Vm from './Vm.vue'
+export default {
+  name: "HelloWorld",
+  data() {
+    return {
+      msg: "Welcome to Your Vue.js App"
+    };
+  },
+  components: {
+    Vm,
+  },
+};
+</script>
+
+2.配置scss
+安装sass的依赖包
+
+npm install --save-dev sass-loader
+//sass-loader依赖于node-sass
+npm install --save-dev node-sass
+
+在build文件夹下的webpack.base.conf.js的rules里面添加配置
+
+{
+    test: /\.scss$/,
+    loader: ['style', 'css', 'sass']
+}
+在APP.vue中修改style标签
+
+<style lang="scss">
+启动如果报错，应该是loader版本与webpack版本不匹配。
+
+3.获取vm实例
+var vm =  new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+})
+console.log(vm);
