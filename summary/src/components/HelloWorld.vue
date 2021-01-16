@@ -1,17 +1,22 @@
 <template>
   <div class="hello">
-    123
+    111
+    <Vm></Vm>
   </div>
 </template>
 
 <script>
+import Vm from './Vm.vue'
 export default {
   name: "HelloWorld",
   data() {
     return {
       msg: "Welcome to Your Vue.js App"
     };
-  }
+  },
+  components: {
+    Vm,
+  },
 };
 </script>
 
