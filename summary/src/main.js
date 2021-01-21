@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import './globalFilter'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -13,4 +13,3 @@ var vm =  new Vue({
   components: { App },
   template: '<App/>'
 })
-console.log(vm);
