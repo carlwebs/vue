@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 import './globalFilter'
 import VueResource from 'vue-resource'
+import animated from 'animate.css'
 Vue.config.productionTip = false;
 // VueResource往实例上面挂载了$http
 Vue.use(VueResource);
+Vue.use(animated)
 
 /* eslint-disable no-new */
 var vm =  new Vue({
