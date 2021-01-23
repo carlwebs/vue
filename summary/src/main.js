@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './globalFilter'
-Vue.config.productionTip = false
+import VueResource from 'vue-resource'
+Vue.config.productionTip = false;
+// VueResource往实例上面挂载了$http
+Vue.use(VueResource);
 
 /* eslint-disable no-new */
 var vm =  new Vue({
