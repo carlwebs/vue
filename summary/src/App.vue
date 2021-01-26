@@ -13,7 +13,12 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  watch: {
+    '$route.path'(newValue,oldValue) {
+      console.log(newValue,'----',oldValue);
+    }
+  },
 }
 </script>
 
